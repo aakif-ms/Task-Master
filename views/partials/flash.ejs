@@ -1,0 +1,15 @@
+<% if(success && success.length) { %>
+    <div class="absolute max-auto px-8 py-4">
+        <div class="max-w-lg bg-green-300 shadow-lg rounded-lg p-6">
+            <%= success %>
+        </div>
+    </div>
+    <% } %>
+
+<% if(error && error.length) { %>
+    <div class="absolute max-auto px-8 py-4">
+        <div class="max-w-3xl bg-red-300 shadow-lg rounded-lg p-6">
+            <%= error %>
+        </div>
+    </div>
+    <% } %>

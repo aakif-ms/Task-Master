@@ -1,0 +1,10 @@
+<% layout('./layouts/boilerplate') %>
+
+<div class="flex justify-center items-center min-h-max">
+    <div class="mx-auto px-8 py-4">
+        <div class="max-w-3xl bg-red-300 shadow-lg rounded-lg p-6">
+            <h4 class="text-red-800"><%= err.message %></h4>
+            <p><%= err.stack %></p>
+        </div>
+    </div>
+</div>

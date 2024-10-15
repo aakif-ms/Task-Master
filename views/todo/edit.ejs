@@ -1,0 +1,48 @@
+<% layout('./layouts/boilerplate') %>
+<div class="flex flex-col items-center">
+  <h1 class="mt-5 text-5xl font-bold text-lightTeal lg:ml-12">Edit Todo</h1>
+  <div class="container flex justify-center items-center ml-8 py-8 md:ml-16 md:mr-16 lg:ml-32 lg:mr-16">
+    <form class="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4" action="/todo/<%= todo._id %>?_method=PUT" method="POST">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="heading">
+          Heading
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="heading" type="text" name="todo[heading]" placeholder="Enter heading">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="subheading">
+          Subheading
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="subheading" type="text" name="todo[subHeading]" placeholder="Enter subheading">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="date">
+          Date
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="date" name="todo[date]" type="date">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="description">
+          Description
+        </label>
+        <textarea
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="description" name="todo[description]" placeholder="Enter description"></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-lightTeal hover:bg-darkTeal text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Add Todo
+        </button>
+        <a href="/"
+          class="bg-dangerRed hover:bg-roseRed text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
